@@ -18,14 +18,14 @@ Esc key for Skip
 
 ## How To Use
 
-1. Import walk-tour.html. If you want to use custom tour element import just the walk-tour-behavior.
+1. Import walk-tour.html.
 2. Include `<walk-tour></walk-tour>` tag in project
-3. Add MyMixins.WalkTourMixin to component behaviors. 
-4. Call `_showhelp` Function from Web Compomnent whose help is to be shown
+3. Use MyMixins.WalkTourMixin in your web component.
+4. Call `_showhelp` Function from web component whose help is to be shown
 
 this._showHelp( element , Message Title, Message Body, Version Number);
 
-### Version Number is if we want to update message later on  
+### Version Number is if we want to update message later on
 ### Default Value : 1
 
 For Eg
