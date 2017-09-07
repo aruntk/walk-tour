@@ -20,7 +20,7 @@ Esc key for Skip
 
 1. Import walk-tour.html. If you want to use custom tour element import just the walk-tour-behavior.
 2. Include `<walk-tour></walk-tour>` tag in project
-3. Add MyBehaviors.WalkTourBehavior to component behaviors. 
+3. Add MyMixins.WalkTourMixin to component behaviors. 
 4. Call `_showhelp` Function from Web Compomnent whose help is to be shown
 
 this._showHelp( element , Message Title, Message Body, Version Number);
@@ -71,8 +71,8 @@ For Eg to show help after 15 sec
 
 ```js
 
-this.async(function() {
-this._showHelp(this.$.searchboxx ,"Search Box", ["Search Your Queries Here Powered By Google!","Bullets can be used as well","Bullet 2","Bullet 3"],1);
+setTimeout(() => {
+this._showHelp(this.$.searchbox ,"Search Box", ["Search Your Queries Here Powered By Google!","Bullets can be used as well","Bullet 2","Bullet 3"],1);
 
 }
 ,15000);
@@ -83,7 +83,7 @@ this._showHelp(this.$.searchboxx ,"Search Box", ["Search Your Queries Here Power
 
 ```html
 
-<walk-tour {{welcomeShow}}="false" {{welcomeTitle}}="Welcome Title to be shown" {{welcomeMsg}}=="Welcome Message to be shown" ></walk-tour> 
+<walk-tour welcome-Show="false" welcome-title="Welcome Title to be shown" welcome-msg=="Welcome Message to be shown" ></walk-tour> 
 
 ```
 Default Values are:
@@ -97,7 +97,7 @@ welcomeMsg:"You can go to and fro between elements using mouse as well as keyboa
 Clear the walk-tour-viewed key value pair from localstorage.
 
 ```js
-document.querySelector("walk-tour")._cookies = {};
+document.querySelector("walk-tour").reset();
 ```
 
 Now run `this._showHelp`.
