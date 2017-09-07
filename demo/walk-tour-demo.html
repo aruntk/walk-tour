@@ -1,13 +1,11 @@
 <link rel="import" href="../../polymer/polymer.html">
 
 <link rel="import" href="../walk-tour.html">
-<link rel="import" href="../walk-tour-behavior.html">
-<link rel="import" href="../walk-tour-icons.html">
 <link rel="import" href="../../app-storage/app-localstorage/app-localstorage-document.html">
 
 <dom-module id="walk-tour-demo">
-
-  <style>
+  <template>
+    <style>
 #container {
 
   text-align: center;
@@ -36,13 +34,10 @@
       display: inline-block;
     }
 
-  </style>
-
-  <template>
-
+    </style>
     <div id="container">
-
-      <walk-tour></walk-tour>
+      <button on-click="start">Start Tour</button>
+      <walk-tour id="tourEl"></walk-tour>
 
       <div id="div1" ></div>
 
@@ -53,25 +48,5 @@
     </div>
 
   </template>
-
-  <script>
-Polymer({
-  is : "walk-tour-demo",
-
-  behaviors: [MyBehaviors.WalkTourBehavior],
-
-  attached : function() {
-    this.async(function() {
-
-      /*************Elelment Id , Title , Message, Version Number ******************************** */
-      this._showHelp(this.$.div1, "DashBoard", "This is the Main Page .View User Preferences Here!");
-      this._showHelp(this.$.div2, "Charts Menu", "View Your Statistics Here!");
-      this._showHelp(this.$.div3, "Maps Menu", "View Different Locations on Map Here !");
-
-    }, 1000);
-
-  },
-});
-  </script>
-
+  <script src="walk-tour-demo.js"></script>
 </dom-module>

@@ -1,0 +1,119 @@
+<dom-module id="walk-tour-css">
+  <template>
+    <style>
+#tooltip {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  height: auto;
+  max-width: 600px;
+  min-width: 100px;
+  color: #FFFFFF;
+  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
+  border-color: grey;
+  pointer-events: auto;
+  @apply(--walk-tour-tooltip);
+  display : none;
+}
+#overlay_back {
+  position: fixed;
+  z-index: 90000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+  visibility: hidden;
+}
+
+#overlay {
+  position: fixed;
+  z-index: 99999;
+  left: -295px;
+  top: -100px;
+  width: 0px;
+  height: 0px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0);
+  box-shadow: 0px 0px 40px 100px rgba(0,0,0,0) inset, 0px 0px 0px 10000px rgba(0,0,0,0.9);
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+    display : none;
+}
+
+.info {
+  opacity: 0.70;
+}
+
+#next {
+
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  background-color: #424242;
+  border-radius: 50%;
+}
+#next:hover {
+  background-color: #757575;
+}
+#previous {
+  float: left;
+  margin-left: 70px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+#previous:hover {
+  background-color: #757575;
+}
+#title {
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 12px;
+  width: 100%;
+  padding-bottom: 15px;
+  height: auto;
+}
+
+#msg {
+  text-align: justify;
+  font-size: 16px;
+  padding: 10px 15px 10px 15px;
+}
+
+#title-icon {
+  display: block;
+  overflow: auto;
+}
+
+#icc {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#footer {
+  display: inline;
+}
+#pg_no {
+  float: left;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #f44336;
+  opacity: 0.7;
+  font-size: 13px;
+}
+#cross {
+  color: #e57373;;
+  float: right;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+#skip {
+
+  float: left;
+  width: 98px;
+}
+    </style>
+  </template>
+</dom-module>

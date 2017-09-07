@@ -1,0 +1,28 @@
+{
+  "name": "walk-tour",
+  "version": "1.0.0",
+  "description": "polymer tour element",
+  "main": "walk-tour.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aruntk/walk-tour.git"
+  },
+  "author": "aruntk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aruntk/walk-tour/issues"
+  },
+  "homepage": "https://github.com/aruntk/walk-tour#readme",
+  "devDependencies": {
+    "babel-eslint": "6",
+    "eslint": "3.x",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
